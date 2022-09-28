@@ -1,0 +1,29 @@
+Number of employees:4
+Here the goodies that are selected for distribution are:
+MI Band: 999
+Sandwich Toaster: 2195
+Cult Pass: 2799
+Scale: 4999
+
+
+And the difference between the chosen goodies with highest price and the highest price and the lowest price is:3121
+
+Number of employees:6
+Here the goodies that are selected for distribution are:
+MI Band: 999
+Sandwich Toaster: 2195
+Cult Pass: 2799
+Scale: 4999
+Fitbit Plus: 7980
+Microwave Oven: 9800
+
+
+And the difference between the chosen goodies with highest price and the highest price and the lowest price is:7804
+
+Number of employees:2
+Here the goodies that are selected for distribution are:
+MI Band: 999
+Sandwich Toaster: 2195
+
+
+And the difference between the chosen goodies with highest price and the highest price and the lowest price is:199
