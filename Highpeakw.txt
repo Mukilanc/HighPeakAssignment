@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<math.h>
+
+int asc(int array[],int N){
+    int temp,i,j;
+    for(i=0;i<N;i++){
+        //int swapped=0}
+        for(j=i+1;j<N;j++){
+        if(array[i]>array[j])
+            {
+                temp=array[i];
+                array[i]=array[j];
+                array[j]=temp;
+                //swapped=i
+            }
+        }
+    }
+}
+
+int mini(int r, int s){
+    if(r>s)
+        return s;
+    else 
+        return r;
+}
+int minDifference(int array[],int N,int M){
+    int result = 2147483647;
+    asc(array, N);
+    for(int i=0;i<=N-M;i++)
+        {
+            result = mini(result,array[i+M-1]-array[i]);
+        }
+        return result;
+}
+int findele(int res,int array[],int N,int M){
+    int result=2147483647;
+    for(int i=0;i<=N-M;i++)
+        {
+            result = mini(result,array[i+M-1]-array[i]);
+            if(res==result){
+            return i;
+        }
+        return 0;
+        }
+}
+
+void main()
+{
+    int array[] = {7980,22349,999,2799,229900,11101,9999,2195,9800,4999};
+    char *items[1000] = {"MI Band: 999","Sandwich Toaster: 2195" ,"Cult Pass: 2799","Scale: 4999","Fitbit Plus: 7980","Microwave Oven: 9800" ,"Alexa: 9999","Digital Camera: 11101", "IPods: 22349","Macbook Pro: 229900"};
+    int N = sizeof(array)/sizeof(array[0]);
+    printf("Enter number of employees:");
+    int M;
+    scanf("%d",&M);
+    //asc(array, N);
+    int result = minDifference(array,N,M);
+    printf("Number of employees:%d",M);
+    int index1 = findele(result,array,N,M);
+    printf("\nHere the goodies that are selected for distribution are:\n");
+    for (int i=index1;i<index1+M;i++)
+        printf("%s\n",items[i]);
+    printf("\n");
+    printf("\nAnd the difference between the chosen goodies with highest price and the highest price and the lowest price is:%d",result);
+}
